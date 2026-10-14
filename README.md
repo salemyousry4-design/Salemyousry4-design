@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="salem-engine-animated.svg" alt="ML engine: from raw data to client product" width="100%" />
+  <img src="salem-engine-embedded.svg" alt="ML engine: from raw data to client product" width="100%" />
 </p>
 
 <p align="center">
