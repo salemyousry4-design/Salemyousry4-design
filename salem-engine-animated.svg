@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2048 768" width="2048" height="768">
+  <defs>
+    <clipPath id="frame"><rect x="0" y="0" width="2048" height="768"/></clipPath>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.48" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="0.52" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== ORIGINAL IMAGE, pixel-for-pixel, untouched ===== -->
+  <image href="salem-engine.png" xlink:href="salem-engine.png" x="0" y="0" width="2048" height="768"/>
+
+  <g clip-path="url(#frame)">
+    <!-- global light sweep for a premium "alive" feel -->
+    <rect x="-1200" y="-1200" width="4000" height="4000" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate" from="-700 -700" to="700 700" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- faint twinkling stars in the empty dark areas only -->
+    <g fill="#cbd5e1">
+      <circle cx="60" cy="60" r="1.3" opacity="0.5"><animate attributeName="opacity" values="0.1;0.7;0.1" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="660" r="1.1" opacity="0.5"><animate attributeName="opacity" values="0.1;0.6;0.1" dur="3.1s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="1990" cy="650" r="1.2" opacity="0.5"><animate attributeName="opacity" values="0.1;0.7;0.1" dur="2.7s" begin="0.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1970" cy="70" r="1.1" opacity="0.5"><animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.9s" begin="1.2s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- ===== rotating glow halos around each gear (pure overlay, artwork untouched) ===== -->
+    <g fill="none" stroke-linecap="round">
+      <!-- 1 Raw Data -->
+      <circle cx="264" cy="450" r="134" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 14" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="0 264 450" to="360 264 450" dur="9s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 2 Clean & EDA -->
+      <circle cx="619" cy="347" r="128" stroke="#60a5fa" stroke-width="2" stroke-dasharray="3 14" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="360 619 347" to="0 619 347" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 3 Features -->
+      <circle cx="561" cy="595" r="124" stroke="#818cf8" stroke-width="2" stroke-dasharray="3 14" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="0 561 595" to="360 561 595" dur="8.5s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 4 Modeling (core) -->
+      <circle cx="981" cy="450" r="178" stroke="#a78bfa" stroke-width="2.4" stroke-dasharray="4 16" opacity="0.9">
+        <animateTransform attributeName="transform" type="rotate" from="360 981 450" to="0 981 450" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 5 Evaluate & Tune -->
+      <circle cx="1307" cy="355" r="127" stroke="#e879f9" stroke-width="2" stroke-dasharray="3 14" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="0 1307 355" to="360 1307 355" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 6 Deploy on AWS -->
+      <circle cx="1275" cy="596" r="121" stroke="#fbbf24" stroke-width="2" stroke-dasharray="3 14" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="360 1275 596" to="0 1275 596" dur="8.5s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 7 Monitor -->
+      <circle cx="1549" cy="472" r="125" stroke="#fb923c" stroke-width="2" stroke-dasharray="3 14" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="0 1549 472" to="360 1549 472" dur="9s" repeatCount="indefinite"/>
+      </circle>
+      <!-- 8 Client Product -->
+      <circle cx="1808" cy="441" r="131" stroke="#34d399" stroke-width="2" stroke-dasharray="3 14" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="360 1808 441" to="0 1808 441" dur="8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ===== pulsing glow behind each numbered badge ===== -->
+    <g>
+      <circle cx="262" cy="318" r="15" fill="#38bdf8" opacity="0.5"><animate attributeName="r" values="13;20;13" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0.1;0.55" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="619" cy="226" r="15" fill="#60a5fa" opacity="0.5"><animate attributeName="r" values="13;20;13" dur="1.8s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0.1;0.55" dur="1.8s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="560" cy="470" r="15" fill="#818cf8" opacity="0.5"><animate attributeName="r" values="13;20;13" dur="1.8s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0.1;0.55" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="983" cy="283" r="17" fill="#a78bfa" opacity="0.55"><animate attributeName="r" values="15;23;15" dur="1.8s" begin="0.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" begin="0.1s" repeatCount="indefinite"/></circle>
+      <circle cx="1308" cy="230" r="15" fill="#e879f9" opacity="0.5"><animate attributeName="r" values="13;20;13" dur="1.8s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0.1;0.55" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="1275" cy="480" r="15" fill="#fbbf24" opacity="0.5"><animate attributeName="r" values="13;20;13" dur="1.8s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0.1;0.55" dur="1.8s" begin="0.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1548" cy="357" r="15" fill="#fb923c" opacity="0.5"><animate attributeName="r" values="13;20;13" dur="1.8s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0.1;0.55" dur="1.8s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="1807" cy="320" r="15" fill="#34d399" opacity="0.5"><animate attributeName="r" values="13;20;13" dur="1.8s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0.1;0.55" dur="1.8s" begin="1.2s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- ===== travelling light dots along the real left/right input-output wire stubs ===== -->
+    <g>
+      <circle r="3.2" fill="#38bdf8"><animateMotion dur="2.2s" repeatCount="indefinite" path="M0,328 L140,328"/><animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/></circle>
+      <circle r="3.2" fill="#38bdf8"><animateMotion dur="2.6s" begin="0.4s" repeatCount="indefinite" path="M0,368 L140,368"/><animate attributeName="opacity" values="0;1;0" dur="2.6s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle r="3.2" fill="#38bdf8"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M0,408 L140,408"/><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/></circle>
+
+      <circle r="3.2" fill="#34d399"><animateMotion dur="2.2s" repeatCount="indefinite" path="M1908,410 L2048,410"/><animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/></circle>
+      <circle r="3.2" fill="#34d399"><animateMotion dur="2.6s" begin="0.5s" repeatCount="indefinite" path="M1908,460 L2048,460"/><animate attributeName="opacity" values="0;1;0" dur="2.6s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle r="3.2" fill="#34d399"><animateMotion dur="2.4s" begin="1s" repeatCount="indefinite" path="M1908,510 L2048,510"/><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="1s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+</svg>
